@@ -27,9 +27,9 @@ namespace Life_Green_dal
 
         public bool alterar(SqlConnection con, Produtos objProd)
         {
-            string alterarProd = "UPDATE Produtos SET" +
+            string alterarProd = "UPDATE Produtos SET " +
                 "nomeProd = '" + objProd.NomeProd + "'," +
-                "categoriaProd + '" + objProd.CategoriaProd + "'," +
+                "categoriaProd = '" + objProd.CategoriaProd + "'," +
                 "qtdProd = '" + objProd.QtdProd + "'," +
                 "precoProd = '" + objProd.PrecoProd + "'," +
                 "medidaPord = '" + objProd.MedidaProd + "'," +

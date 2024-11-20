@@ -27,7 +27,7 @@ namespace Life_Green.view
             CadProd cadProd = new CadProd();
             this.Hide();
             cadProd.ShowDialog();
-            
+
         }
 
         private void btncadfunc_Click(object sender, EventArgs e)
@@ -35,7 +35,19 @@ namespace Life_Green.view
             CadFunc cadFunc = new CadFunc();
             this.Hide();
             cadFunc.ShowDialog();
-            
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnexaltProd_Click(object sender, EventArgs e)
+        {
+            ExAltProd exAltProd = new ExAltProd();
+            this.Hide();
+            exAltProd.ShowDialog();
         }
     }
 }
