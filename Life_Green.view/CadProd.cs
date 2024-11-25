@@ -83,15 +83,27 @@ namespace Life_Green.view
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-           Tela_login tl = new Tela_login();
-            tl.Show();
-            this.Hide();
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
             TelaApp ta = new TelaApp();
             ta.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+            Tela_login tl = new Tela_login();
+            tl.Show();
             this.Hide();
 
         }

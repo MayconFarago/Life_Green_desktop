@@ -45,9 +45,13 @@ namespace Life_Green.view
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             groupBox1 = new GroupBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -131,7 +135,8 @@ namespace Life_Green.view
             // 
             // btncadprod
             // 
-            btncadprod.Location = new Point(423, 359);
+            btncadprod.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btncadprod.Location = new Point(423, 379);
             btncadprod.Name = "btncadprod";
             btncadprod.Size = new Size(106, 25);
             btncadprod.TabIndex = 10;
@@ -142,8 +147,9 @@ namespace Life_Green.view
             // lblinfoCadProd
             // 
             lblinfoCadProd.AutoSize = true;
+            lblinfoCadProd.BackColor = Color.Transparent;
             lblinfoCadProd.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblinfoCadProd.Location = new Point(749, 83);
+            lblinfoCadProd.Location = new Point(325, 330);
             lblinfoCadProd.Name = "lblinfoCadProd";
             lblinfoCadProd.Size = new Size(0, 20);
             lblinfoCadProd.TabIndex = 11;
@@ -206,13 +212,45 @@ namespace Life_Green.view
             groupBox1.TabStop = false;
             groupBox1.Text = "Informações";
             // 
+            // pictureBox3
+            // 
+            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
+            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox3.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox3.ErrorImage = (Image)resources.GetObject("pictureBox3.ErrorImage");
+            pictureBox3.InitialImage = (Image)resources.GetObject("pictureBox3.InitialImage");
+            pictureBox3.Location = new Point(921, 2);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(35, 26);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 39;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
+            pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox4.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox4.ErrorImage = (Image)resources.GetObject("pictureBox4.ErrorImage");
+            pictureBox4.InitialImage = (Image)resources.GetObject("pictureBox4.InitialImage");
+            pictureBox4.Location = new Point(962, 2);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(35, 26);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 38;
+            pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
+            // 
             // CadProd
             // 
             AutoScaleDimensions = new SizeF(9F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.OIP;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1000, 500);
+            ClientSize = new Size(1162, 591);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox4);
             Controls.Add(lblinfoCadProd);
             Controls.Add(groupBox1);
             Controls.Add(pictureBox2);
@@ -227,6 +265,8 @@ namespace Life_Green.view
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -258,5 +298,7 @@ namespace Life_Green.view
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private GroupBox groupBox1;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
     }
 }

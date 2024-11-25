@@ -152,7 +152,7 @@ namespace Life_Green.view
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(451, 398);
+            btnSalvar.Location = new Point(434, 412);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(94, 29);
             btnSalvar.TabIndex = 12;
@@ -163,7 +163,8 @@ namespace Life_Green.view
             // lblInfoCadFunc
             // 
             lblInfoCadFunc.AutoSize = true;
-            lblInfoCadFunc.Location = new Point(414, 48);
+            lblInfoCadFunc.BackColor = Color.Transparent;
+            lblInfoCadFunc.Location = new Point(314, 293);
             lblInfoCadFunc.Name = "lblInfoCadFunc";
             lblInfoCadFunc.Size = new Size(0, 20);
             lblInfoCadFunc.TabIndex = 13;
@@ -198,7 +199,7 @@ namespace Life_Green.view
             groupBox1.Controls.Add(txtCPF);
             groupBox1.Location = new Point(308, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(364, 283);
+            groupBox1.Size = new Size(364, 264);
             groupBox1.TabIndex = 36;
             groupBox1.TabStop = false;
             groupBox1.Text = "Informações";
@@ -208,7 +209,7 @@ namespace Life_Green.view
             groupBox2.BackColor = Color.Transparent;
             groupBox2.Controls.Add(txtConfSenha);
             groupBox2.Controls.Add(label6);
-            groupBox2.Location = new Point(308, 301);
+            groupBox2.Location = new Point(308, 316);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(364, 75);
             groupBox2.TabIndex = 37;
@@ -225,7 +226,6 @@ namespace Life_Green.view
             Controls.Add(pictureBox1);
             Controls.Add(lblInfoCadFunc);
             Controls.Add(btnSalvar);
-            Cursor = Cursors.Default;
             Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CadFunc";
