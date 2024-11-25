@@ -29,13 +29,13 @@ namespace Life_Green_dal
         
         public bool alterar(SqlConnection con, Funcionario objfun)
         {
-            string alterarFuncionario = " UPDATE Funcionarios SET" +
+            string alterarFuncionario = "UPDATE Funcionarios SET " +
                                       "nome = '" + objfun.Nome + "'," +
                                       "cargo = '" + objfun.Cargo + "'," +
                                       "cpffunc = '" + objfun.Cpffunc + "'," +
                                       "nomeUser = '" + objfun.NomeUser + "'," +
-                                      "senhaUser = '" + objfun.SenhaUser + "'," +
-                                      "WHERE ID = '" + objfun.Id + " ";
+                                      "senhaUser = '" + objfun.SenhaUser + "'" +
+                                      "WHERE ID = " + objfun.Id + " ";
             try
             {
                 executarComando(alterarFuncionario, con);
@@ -48,7 +48,7 @@ namespace Life_Green_dal
 
         public bool excluir(SqlConnection con, Funcionario objfun)
         {
-            string excluirFuncionario = "select * from Funcionarios where ID=" + objfun.Id;
+            string excluirFuncionario = "DELETE Funcionarios where ID=" + objfun.Id;
             try
             {
                 executarComando(excluirFuncionario, con);

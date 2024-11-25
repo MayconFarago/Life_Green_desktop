@@ -33,7 +33,7 @@ namespace Life_Green_dal
                 if (con.State == ConnectionState.Open)
                 {
 
-                    con.Open();
+                    con.Close();
                 }
 
             }

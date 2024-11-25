@@ -32,8 +32,8 @@ namespace Life_Green_dal
                 "categoriaProd = '" + objProd.CategoriaProd + "'," +
                 "qtdProd = '" + objProd.QtdProd + "'," +
                 "precoProd = '" + objProd.PrecoProd + "'," +
-                "medidaPord = '" + objProd.MedidaProd + "'," +
-                "WHERE ID = '" + objProd.Id + "";
+                "medidaPord = '" + objProd.MedidaProd + "'" +
+                "WHERE ID = " + objProd.Id + "";
             try
             {
                 executarComando(alterarProd, con);
@@ -47,7 +47,7 @@ namespace Life_Green_dal
 
         public bool excluir(SqlConnection con, Produtos objProd)
         {
-            string excluirProdutos = "select * from Produtos where ID=" + objProd.Id;
+            string excluirProdutos = "delete Produtos where ID=" + objProd.Id;
             try
             {
                 executarComando(excluirProdutos, con);

@@ -41,15 +41,18 @@ namespace Life_Green.view
             ckbMostrarSenha = new CheckBox();
             groupBox2 = new GroupBox();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lbluser
             // 
             lbluser.AutoSize = true;
             lbluser.ForeColor = SystemColors.ActiveCaptionText;
-            lbluser.Location = new Point(40, 58);
+            lbluser.Location = new Point(50, 67);
+            lbluser.Margin = new Padding(4, 0, 4, 0);
             lbluser.Name = "lbluser";
             lbluser.Size = new Size(78, 20);
             lbluser.TabIndex = 0;
@@ -59,7 +62,8 @@ namespace Life_Green.view
             // lblsenha
             // 
             lblsenha.AutoSize = true;
-            lblsenha.Location = new Point(50, 123);
+            lblsenha.Location = new Point(62, 141);
+            lblsenha.Margin = new Padding(4, 0, 4, 0);
             lblsenha.Name = "lblsenha";
             lblsenha.Size = new Size(65, 20);
             lblsenha.TabIndex = 1;
@@ -67,23 +71,26 @@ namespace Life_Green.view
             // 
             // txtuser
             // 
-            txtuser.Location = new Point(144, 58);
+            txtuser.Location = new Point(180, 67);
+            txtuser.Margin = new Padding(4, 3, 4, 3);
             txtuser.Name = "txtuser";
-            txtuser.Size = new Size(174, 27);
+            txtuser.Size = new Size(216, 27);
             txtuser.TabIndex = 2;
             // 
             // txtsenha
             // 
-            txtsenha.Location = new Point(144, 123);
+            txtsenha.Location = new Point(180, 141);
+            txtsenha.Margin = new Padding(4, 3, 4, 3);
             txtsenha.Name = "txtsenha";
-            txtsenha.Size = new Size(174, 27);
+            txtsenha.Size = new Size(216, 27);
             txtsenha.TabIndex = 3;
             // 
             // btnlogin
             // 
-            btnlogin.Location = new Point(28, 38);
+            btnlogin.Location = new Point(35, 44);
+            btnlogin.Margin = new Padding(4, 3, 4, 3);
             btnlogin.Name = "btnlogin";
-            btnlogin.Size = new Size(126, 29);
+            btnlogin.Size = new Size(158, 33);
             btnlogin.TabIndex = 4;
             btnlogin.Text = "Login";
             btnlogin.UseVisualStyleBackColor = true;
@@ -91,9 +98,10 @@ namespace Life_Green.view
             // 
             // btncadastro
             // 
-            btncadastro.Location = new Point(218, 38);
+            btncadastro.Location = new Point(272, 44);
+            btncadastro.Margin = new Padding(4, 3, 4, 3);
             btncadastro.Name = "btncadastro";
-            btncadastro.Size = new Size(126, 29);
+            btncadastro.Size = new Size(158, 33);
             btncadastro.TabIndex = 5;
             btncadastro.Text = "Cadastre-se";
             btncadastro.UseVisualStyleBackColor = true;
@@ -102,7 +110,8 @@ namespace Life_Green.view
             // lblinfotela
             // 
             lblinfotela.AutoSize = true;
-            lblinfotela.Location = new Point(121, 23);
+            lblinfotela.Location = new Point(151, 26);
+            lblinfotela.Margin = new Padding(4, 0, 4, 0);
             lblinfotela.Name = "lblinfotela";
             lblinfotela.Size = new Size(0, 20);
             lblinfotela.TabIndex = 6;
@@ -118,16 +127,19 @@ namespace Life_Green.view
             groupBox1.Controls.Add(lbluser);
             groupBox1.Controls.Add(lblsenha);
             groupBox1.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(210, 87);
+            groupBox1.Location = new Point(262, 100);
+            groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(372, 202);
+            groupBox1.Padding = new Padding(4, 3, 4, 3);
+            groupBox1.Size = new Size(465, 232);
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             // 
             // ckbMostrarSenha
             // 
             ckbMostrarSenha.AutoSize = true;
-            ckbMostrarSenha.Location = new Point(144, 163);
+            ckbMostrarSenha.Location = new Point(180, 187);
+            ckbMostrarSenha.Margin = new Padding(4, 3, 4, 3);
             ckbMostrarSenha.Name = "ckbMostrarSenha";
             ckbMostrarSenha.Size = new Size(140, 24);
             ckbMostrarSenha.TabIndex = 7;
@@ -141,38 +153,63 @@ namespace Life_Green.view
             groupBox2.Controls.Add(btncadastro);
             groupBox2.Controls.Add(btnlogin);
             groupBox2.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox2.Location = new Point(210, 314);
+            groupBox2.Location = new Point(262, 361);
+            groupBox2.Margin = new Padding(4, 3, 4, 3);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(372, 85);
+            groupBox2.Padding = new Padding(4, 3, 4, 3);
+            groupBox2.Size = new Size(465, 98);
             groupBox2.TabIndex = 8;
             groupBox2.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(326, 36);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Impact", 25.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DarkGreen;
+            label1.Location = new Point(413, 33);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(168, 34);
+            label1.Size = new Size(212, 54);
             label1.TabIndex = 9;
             label1.Text = "Life Green";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox1.ErrorImage = (Image)resources.GetObject("pictureBox1.ErrorImage");
+            pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
+            pictureBox1.Location = new Point(963, 1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(35, 26);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 33;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // Tela_login
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(800, 450);
+            BackgroundImage = Properties.Resources.OIP;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1000, 500);
+            Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 3, 4, 3);
             Name = "Tela_login";
             Text = "login";
             Load += Tela_login_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -200,5 +237,6 @@ namespace Life_Green.view
         private GroupBox groupBox2;
         private CheckBox ckbMostrarSenha;
         private Label label1;
+        private PictureBox pictureBox1;
     }
 }

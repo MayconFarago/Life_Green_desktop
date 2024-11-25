@@ -76,7 +76,7 @@ namespace Life_Green.view
 
         }
 
-        
+
         private void ckbMostrarSenha_CheckedChanged_1(object sender, EventArgs e)
         {
 
@@ -94,6 +94,11 @@ namespace Life_Green.view
                 ckbMostrarSenha.Text = "Mostrar Senha";
 
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

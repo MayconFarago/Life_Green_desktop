@@ -157,7 +157,7 @@ namespace Life_Green.view
             // 
             // CadFunc
             // 
-            ClientSize = new Size(593, 378);
+            ClientSize = new Size(982, 453);
             Controls.Add(lblInfoCadFunc);
             Controls.Add(btnSalvar);
             Controls.Add(txtConfSenha);
@@ -173,6 +173,7 @@ namespace Life_Green.view
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "CadFunc";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Tela cadFunc";
             Load += CadFunc_Load;
             ResumeLayout(false);

@@ -49,5 +49,19 @@ namespace Life_Green.view
             this.Hide();
             exAltProd.ShowDialog();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Tela_login tela_Login = new Tela_login();
+            tela_Login.Show();
+            this.Hide();
+        }
+
+        private void btnexaltFunc_Click(object sender, EventArgs e)
+        {
+            ExAltFunc exAltFunc = new ExAltFunc();
+            exAltFunc.Show();
+            this.Hide();
+        }
     }
 }
