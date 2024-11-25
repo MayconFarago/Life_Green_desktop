@@ -299,6 +299,7 @@ namespace Life_Green.view
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ExAltProd";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Alterar e excluir produto";
             Load += ExAltProd_Load;
             groupBox1.ResumeLayout(false);

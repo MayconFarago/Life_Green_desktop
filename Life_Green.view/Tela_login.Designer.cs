@@ -204,6 +204,7 @@ namespace Life_Green.view
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
             Name = "Tela_login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "login";
             Load += Tela_login_Load;
             groupBox1.ResumeLayout(false);

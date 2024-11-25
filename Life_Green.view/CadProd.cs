@@ -34,16 +34,16 @@ namespace Life_Green.view
             Prod.QtdProd = Convert.ToInt32((txtqtd.Text));
             Prod.PrecoProd = Convert.ToDouble((txtpreco.Text).ToString());
             Prod.MedidaProd = txtmedida.Text;
-            
+
 
             produtoDal produtoDal = new produtoDal();
 
             try
             {
                 if (string.IsNullOrWhiteSpace(txtcategoria.Text) ||
-                    string.IsNullOrWhiteSpace(txtnomeprod.Text)  ||
+                    string.IsNullOrWhiteSpace(txtnomeprod.Text) ||
                     string.IsNullOrWhiteSpace(txtmedida.Text))
-                    
+
                 {
 
                     lblinfoCadProd.Text = "Garanta que todos os campos foram preenchido";
@@ -69,7 +69,7 @@ namespace Life_Green.view
                     txtqtd.Clear();
                     txtmedida.Clear();
 
-                   
+
                 }
             }
             catch (Exception ex)
@@ -81,8 +81,19 @@ namespace Life_Green.view
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+           Tela_login tl = new Tela_login();
+            tl.Show();
+            this.Hide();
+        }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            TelaApp ta = new TelaApp();
+            ta.Show();
+            this.Hide();
 
-
+        }
     }
 }
