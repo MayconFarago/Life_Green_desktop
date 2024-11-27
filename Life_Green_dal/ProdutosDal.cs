@@ -56,6 +56,7 @@ namespace Life_Green_dal
             catch (Exception ex)
             {
                 throw ex;
+                
             }
         }
 

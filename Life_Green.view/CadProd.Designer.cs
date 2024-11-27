@@ -248,7 +248,7 @@ namespace Life_Green.view
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.OIP;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1162, 591);
+            ClientSize = new Size(1000, 500);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox4);
             Controls.Add(lblinfoCadProd);

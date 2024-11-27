@@ -10,18 +10,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Life_Green.view
 {
     public partial class ExAltProd : Form
     {
-
+        private DataTable produtosl;
         SqlConnection Connection;
+        private DataTable produtosTable;
         public ExAltProd()
         {
             InitializeComponent();
         }
-
 
         private async void btnalterar_Click(object sender, EventArgs e)
         {
@@ -83,6 +84,7 @@ namespace Life_Green.view
             }
             await Task.Delay(1500);
             lblInfoexprod.Text = "Qual a proxima Busca, Altereação ou Exclusão?";
+            button1_Click(sender, e);
         }
 
         private async void btnbuscaprod_Click(object sender, EventArgs e)
@@ -98,7 +100,7 @@ namespace Life_Green.view
                 try
                 {
 
-                    mtr = Convert.ToInt32(txtidprod.Text);  
+                    mtr = Convert.ToInt32(txtidprod.Text);
                 }
                 catch (Exception ex)
                 {
@@ -139,6 +141,7 @@ namespace Life_Green.view
             }
             await Task.Delay(1500);
             lblInfoexprod.Text = "Qual a proxima Busca, Altereação ou Exclusão?";
+            button1_Click(sender, e);
         }
 
         private async void btnexcluir_Click(object sender, EventArgs e)
@@ -183,6 +186,7 @@ namespace Life_Green.view
                     txtpreco.Clear();
                     txtidprod.Clear();
 
+
                 }
                 catch (Exception ex)
                 {
@@ -203,6 +207,7 @@ namespace Life_Green.view
             }
             await Task.Delay(1500);
             lblInfoexprod.Text = "Qual a proxima Busca, Altereação ou Exclusão?";
+            button1_Click(sender, e);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -228,5 +233,46 @@ namespace Life_Green.view
         {
 
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (listBox1.SelectedIndex != -1)
+            {
+
+                DataRowView rowView = (DataRowView)listBox1.SelectedItem;
+
+                txtidprod.Text = rowView["Id"].ToString();
+                txtnomeprod.Text = rowView["nomeProd"].ToString();
+                txtcategoria.Text = rowView["categoriaProd"].ToString();
+                txtpreco.Text = rowView["precoProd"].ToString() + "$";
+                txtqtd.Text = rowView["qtdProd"].ToString();
+                txtmedida.Text = rowView["medidaPord"].ToString();
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+                Connection = FabricaConexao.getConnection();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Produtos", Connection);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                produtosTable = new DataTable();
+
+                Connection.Open();
+                adapter.Fill(produtosTable);
+                Connection.Close();
+
+                
+                listBox1.DisplayMember = "nomeProd";
+                listBox1.ValueMember = "id";
+                listBox1.DataSource = produtosTable;
+            
+        
+        }
     }
+        
+    
 }

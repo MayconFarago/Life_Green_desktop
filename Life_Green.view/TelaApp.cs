@@ -63,5 +63,10 @@ namespace Life_Green.view
             exAltFunc.Show();
             this.Hide();
         }
+
+        private void btncsvfunc_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

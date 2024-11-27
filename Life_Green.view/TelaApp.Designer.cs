@@ -88,7 +88,7 @@
             groupBox2.Size = new Size(293, 125);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Alterar e excluir";
+            groupBox2.Text = "Alterar, Buscar e Excluir";
             groupBox2.Enter += groupBox2_Enter;
             // 
             // btnexaltFunc

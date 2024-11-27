@@ -61,18 +61,18 @@ namespace Life_Green_dal
 
         public DataTable retornaDataTable(string comando, SqlConnection con)
         {
-            try
-            {
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand(comando, con);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                return dt;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+             try
+             {
+                 DataTable dt = new DataTable();
+                 SqlCommand cmd = new SqlCommand(comando, con);
+                 SqlDataAdapter da = new SqlDataAdapter(cmd);
+                 da.Fill(dt);
+                 return dt;
+             }
+             catch (Exception ex)
+             {
+                 throw ex;
+             }
         }
 
         public DataSet retornaDataSet (string comando, SqlConnection con)

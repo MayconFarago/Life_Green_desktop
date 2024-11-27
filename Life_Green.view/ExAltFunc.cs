@@ -17,6 +17,7 @@ namespace Life_Green.view
     {
 
         SqlConnection Connection;
+        private DataTable funcionariostab;
         public ExAltFunc()
         {
             InitializeComponent();
@@ -229,6 +230,41 @@ namespace Life_Green.view
             Tela_login Tl = new Tela_login();
             Tl.Show();
             this.Hide();
+        }
+
+        private void btnlistar_Click(object sender, EventArgs e)
+        {
+            Connection = FabricaConexao.getConnection();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Funcionarios", Connection);
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            funcionariostab = new DataTable();
+
+            Connection.Open();
+            adapter.Fill(funcionariostab);
+            Connection.Close();
+
+
+            listBox1.DisplayMember = "nome";
+            listBox1.ValueMember = "id";
+            listBox1.DataSource = funcionariostab;
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (listBox1.SelectedIndex != -1)
+            {
+
+                DataRowView rowView = (DataRowView)listBox1.SelectedItem;
+
+                txtidfunc.Text = rowView["Id"].ToString();
+                txtNome.Text = rowView["nome"].ToString();
+                txtCargo.Text = rowView["cargo"].ToString();
+                txtCPF.Text = rowView["cpffunc"].ToString();
+                txtUsuario.Text = rowView["nomeUser"].ToString();
+                txtSenha.Text = rowView["senhaUser"].ToString();
+            }
         }
     }
 }

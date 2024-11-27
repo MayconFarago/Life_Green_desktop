@@ -29,6 +29,7 @@ namespace Life_Green.view
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExAltProd));
             txtmedida = new TextBox();
             txtpreco = new TextBox();
@@ -52,11 +53,19 @@ namespace Life_Green.view
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             lblInfoexprod = new Label();
+            produtosBindingSource1 = new BindingSource(components);
+            produtosBindingSource = new BindingSource(components);
+            listBox1 = new ListBox();
+            btnlb = new Button();
+            groupBox4 = new GroupBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)produtosBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)produtosBindingSource).BeginInit();
+            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // txtmedida
@@ -279,10 +288,54 @@ namespace Life_Green.view
             lblInfoexprod.AutoSize = true;
             lblInfoexprod.BackColor = Color.Transparent;
             lblInfoexprod.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblInfoexprod.Location = new Point(563, 154);
+            lblInfoexprod.Location = new Point(115, 134);
             lblInfoexprod.Name = "lblInfoexprod";
             lblInfoexprod.Size = new Size(0, 20);
             lblInfoexprod.TabIndex = 33;
+            // 
+            // produtosBindingSource1
+            // 
+            produtosBindingSource1.DataSource = typeof(model.Produtos);
+            // 
+            // produtosBindingSource
+            // 
+            produtosBindingSource.DataSource = typeof(model.Produtos);
+            // 
+            // listBox1
+            // 
+            listBox1.DisplayMember = "nomeProd";
+            listBox1.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(32, 39);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(266, 104);
+            listBox1.TabIndex = 34;
+            listBox1.ValueMember = "id";
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // btnlb
+            // 
+            btnlb.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnlb.Location = new Point(118, 149);
+            btnlb.Name = "btnlb";
+            btnlb.Size = new Size(94, 29);
+            btnlb.TabIndex = 35;
+            btnlb.Text = "Listar";
+            btnlb.UseVisualStyleBackColor = true;
+            btnlb.Click += button1_Click;
+            // 
+            // groupBox4
+            // 
+            groupBox4.BackColor = Color.Transparent;
+            groupBox4.Controls.Add(btnlb);
+            groupBox4.Controls.Add(listBox1);
+            groupBox4.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBox4.Location = new Point(563, 134);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(328, 198);
+            groupBox4.TabIndex = 23;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Lista de produtos cadastrados";
             // 
             // ExAltProd
             // 
@@ -291,6 +344,7 @@ namespace Life_Green.view
             BackgroundImage = Properties.Resources.OIP;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1000, 500);
+            Controls.Add(groupBox4);
             Controls.Add(lblInfoexprod);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -309,6 +363,9 @@ namespace Life_Green.view
             groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)produtosBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)produtosBindingSource).EndInit();
+            groupBox4.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -337,5 +394,10 @@ namespace Life_Green.view
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Label lblInfoexprod;
+        private BindingSource produtosBindingSource;
+        private BindingSource produtosBindingSource1;
+        private ListBox listBox1;
+        private Button btnlb;
+        private GroupBox groupBox4;
     }
 }

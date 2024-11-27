@@ -51,11 +51,15 @@
             label7 = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
+            groupBox4 = new GroupBox();
+            btnlistar = new Button();
+            listBox1 = new ListBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // txtSenha
@@ -189,7 +193,7 @@
             // 
             lblinfoeafunc.AutoSize = true;
             lblinfoeafunc.BackColor = Color.Transparent;
-            lblinfoeafunc.Location = new Point(539, 161);
+            lblinfoeafunc.Location = new Point(118, 127);
             lblinfoeafunc.Name = "lblinfoeafunc";
             lblinfoeafunc.Size = new Size(0, 20);
             lblinfoeafunc.TabIndex = 26;
@@ -208,9 +212,9 @@
             groupBox1.Controls.Add(txtCPF);
             groupBox1.Controls.Add(txtUsuario);
             groupBox1.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(118, 132);
+            groupBox1.Location = new Point(118, 167);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(266, 309);
+            groupBox1.Size = new Size(266, 274);
             groupBox1.TabIndex = 27;
             groupBox1.TabStop = false;
             groupBox1.Text = "Informações";
@@ -221,7 +225,7 @@
             groupBox2.Controls.Add(btnexcluir);
             groupBox2.Controls.Add(btnsalvarfunc);
             groupBox2.Controls.Add(btnbuscar);
-            groupBox2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBox2.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox2.Location = new Point(528, 322);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(349, 119);
@@ -281,6 +285,38 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // groupBox4
+            // 
+            groupBox4.BackColor = Color.Transparent;
+            groupBox4.Controls.Add(btnlistar);
+            groupBox4.Controls.Add(listBox1);
+            groupBox4.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBox4.Location = new Point(528, 127);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(349, 189);
+            groupBox4.TabIndex = 35;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Lista de Funcionarios";
+            // 
+            // btnlistar
+            // 
+            btnlistar.Location = new Point(129, 154);
+            btnlistar.Name = "btnlistar";
+            btnlistar.Size = new Size(94, 29);
+            btnlistar.TabIndex = 1;
+            btnlistar.Text = "Listar";
+            btnlistar.UseVisualStyleBackColor = true;
+            btnlistar.Click += btnlistar_Click;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new Point(39, 40);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(283, 104);
+            listBox1.TabIndex = 0;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
             // ExAltFunc
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -288,6 +324,7 @@
             BackgroundImage = Properties.Resources.OIP;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(982, 453);
+            Controls.Add(groupBox4);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(groupBox3);
@@ -304,6 +341,7 @@
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox4.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -332,5 +370,8 @@
         private Label label7;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
+        private GroupBox groupBox4;
+        private Button btnlistar;
+        private ListBox listBox1;
     }
 }
