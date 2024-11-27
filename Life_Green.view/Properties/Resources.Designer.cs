@@ -63,6 +63,16 @@ namespace Life_Green.view.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _11111967 {
+            get {
+                object obj = ResourceManager.GetObject("11111967", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OIP {
             get {
                 object obj = ResourceManager.GetObject("OIP", resourceCulture);

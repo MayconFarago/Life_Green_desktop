@@ -333,6 +333,7 @@
             Controls.Add(lblinfoeafunc);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ExAltFunc";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ExAltFun";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
