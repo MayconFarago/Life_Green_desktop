@@ -32,7 +32,7 @@ namespace Life_Green.view
 
         private void btncadfunc_Click(object sender, EventArgs e)
         {
-            CadFunc cadFunc = new CadFunc();
+            CadFunc2 cadFunc = new CadFunc2();
             this.Hide();
             cadFunc.ShowDialog();
 

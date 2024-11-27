@@ -82,6 +82,7 @@ namespace Life_Green.view
 
             await Task.Delay(1500);
             lblinfoeafunc.Text = "Qual a proxima Busca, Altereação ou Exclusão?";
+            btnlistar_Click(sender, e);
         }
 
         private async void btnsalvarfunc_Click(object sender, EventArgs e)
@@ -151,6 +152,7 @@ namespace Life_Green.view
 
             await Task.Delay(1500);
             lblinfoeafunc.Text = "Qual a proxima Busca, Altereação ou Exclusão?";
+            btnlistar_Click(sender, e);
         }
 
         private async void btnexcluir_Click(object sender, EventArgs e)
@@ -214,6 +216,7 @@ namespace Life_Green.view
 
             await Task.Delay(1500);
             lblinfoeafunc.Text = "Qual a proxima Busca, Altereação ou Exclusão?";
+            btnlistar_Click(sender, e);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

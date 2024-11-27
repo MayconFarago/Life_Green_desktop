@@ -193,6 +193,7 @@
             // 
             lblinfoeafunc.AutoSize = true;
             lblinfoeafunc.BackColor = Color.Transparent;
+            lblinfoeafunc.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblinfoeafunc.Location = new Point(118, 127);
             lblinfoeafunc.Name = "lblinfoeafunc";
             lblinfoeafunc.Size = new Size(0, 20);
